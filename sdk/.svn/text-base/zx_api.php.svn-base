@@ -1,0 +1,55 @@
+<?php
+$api_key = "fee11992a4ac4caabfca7800d233f814";                //API KEY
+$secret_key = "a617e78710454b12aab68576382e8e14";           //SECRET KEY
+$redirect_uri = "http://graph.renren.com/oauth/login_success.html";//回调URL，需要与应用信息中填写的一致
+
+
+
+$oauth_base = "https://graph.renren.com/oauth/authorize";
+$api_url = "http://api.renren.com/restserver.do";
+$api_version = "1.0";
+$return_format = "JSON";
+
+
+$oauth_url = $oauth_base."?response_type=code&client_id=".$api_key."&redirect_uri=".$redirect_uri;
+
+
+include("OAuth.php");
+include("users.php");
+include("tools.php");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>

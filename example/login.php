@@ -1,0 +1,23 @@
+<?php
+/*
+*
+*     SDK write by 张玺  http://zhangxi.me
+*     demo
+*     2011.10.28
+*
+*
+*/
+header("Content-Type: text/html; charset=utf-8");
+
+include("../sdk/zx_api.php"); //导入sdk
+
+zx_login($_REQUEST["code"]);//登陆，code是人人回调URL的参数，登陆后会将token,session_key等信息存入 session
+
+$friend = simple_api("friends.getFriends"); //获取好友列表,返回好友数组
+
+//$friend = simple_api("friends.getFriends",array("count"=>10));  //获取10个好友
+
+print_r($friend);//打印好友
+
+
+?>
